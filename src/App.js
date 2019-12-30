@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import SectionA from "./Components/SectionA";
+import SectionB from "./Components/SectionB";
+import SectionC from "./Components/SectionC";
+import { VerticalNav, BackgroundGradient } from "./Components/CssComponents";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BackgroundGradient>
+      <div className="app-top">
+        <VerticalNav>
+          <div
+            onClick={() => (window.location.href = "#sectionA")}
+            className="circle small"
+          ></div>
+          <div
+            onClick={() => (window.location.href = "#sectionB")}
+            className="circle small"
+          ></div>
+          <div
+            onClick={() => (window.location.href = "#sectionC")}
+            className="circle small"
+          ></div>
+        </VerticalNav>
+      </div>
+      <SectionA />
+      <SectionB />
+      <SectionC />
+    </BackgroundGradient>
   );
 }
 
