@@ -2,7 +2,12 @@ import React from "react";
 import { ReactComponent as LinkedIn } from "../Images/linkedin.svg";
 import { ReactComponent as Twitter } from "../Images/twitter.svg";
 import { ReactComponent as Facebook } from "../Images/facebook.svg";
+import { SOCIAL_LINK } from "../Constants"
 const SectionA = () => {
+
+  const handleSocialMedia = media => {
+    window.open(SOCIAL_LINK[media], "_blank");
+  };
   return (
     <div id="sectionA" style={{ height: "100vh" }}>
       <div
@@ -23,7 +28,9 @@ const SectionA = () => {
         </div>
         <div style={{ right: "0", position: "absolute", display: "flex" }}>
           <div
+            onClick={handleSocialMedia.bind(null, "LINKEDIN")}
             style={{
+              cursor: "pointer",
               marginLeft: "10px",
               backgroundColor: "white",
               borderTopLeftRadius: "50%",
@@ -51,7 +58,9 @@ const SectionA = () => {
             }}
           >
             <div
+              onClick={handleSocialMedia.bind(null, "TWITTER")}
               style={{
+                cursor: "pointer",
                 height: "50px",
                 width: "50px",
                 display: "flex",
@@ -62,7 +71,9 @@ const SectionA = () => {
               <Twitter />
             </div>
             <div
+              onClick={handleSocialMedia.bind(null, "FACEBOOK")}
               style={{
+                cursor: "pointer",
                 height: "50px",
                 width: "50px",
                 display: "flex",
@@ -77,14 +88,6 @@ const SectionA = () => {
       </div>
     </div>
   );
-};
-
-const Circle = {
-  height: "50px",
-  width: "50px",
-  backgroundColor: "#bbb",
-  borderRadius: "50%",
-  display: "inline-block"
 };
 
 export default SectionA;

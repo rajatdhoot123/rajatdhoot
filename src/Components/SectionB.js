@@ -29,7 +29,7 @@ const WhatIDO = ({ image }) => (
         </h4>
         <span style={{ color: "#abb0c8" }}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's
+          industry.
         </span>
       </div>
     </div>
