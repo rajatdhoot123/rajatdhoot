@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/rajatdhoot/static/css/main.f63b4555.chunk.css",
-    "main.js": "/rajatdhoot/static/js/main.e8b4048f.chunk.js",
-    "main.js.map": "/rajatdhoot/static/js/main.e8b4048f.chunk.js.map",
+    "main.js": "/rajatdhoot/static/js/main.ce6af4b8.chunk.js",
+    "main.js.map": "/rajatdhoot/static/js/main.ce6af4b8.chunk.js.map",
     "runtime-main.js": "/rajatdhoot/static/js/runtime-main.5cca61a5.js",
     "runtime-main.js.map": "/rajatdhoot/static/js/runtime-main.5cca61a5.js.map",
     "static/js/2.95963926.chunk.js": "/rajatdhoot/static/js/2.95963926.chunk.js",
     "static/js/2.95963926.chunk.js.map": "/rajatdhoot/static/js/2.95963926.chunk.js.map",
     "index.html": "/rajatdhoot/index.html",
-    "precache-manifest.ecef740f52d7695bb297410683dcc182.js": "/rajatdhoot/precache-manifest.ecef740f52d7695bb297410683dcc182.js",
+    "precache-manifest.8f57405a99b9c377756530f20406fbf1.js": "/rajatdhoot/precache-manifest.8f57405a99b9c377756530f20406fbf1.js",
     "service-worker.js": "/rajatdhoot/service-worker.js",
     "static/css/main.f63b4555.chunk.css.map": "/rajatdhoot/static/css/main.f63b4555.chunk.css.map",
     "static/js/2.95963926.chunk.js.LICENSE": "/rajatdhoot/static/js/2.95963926.chunk.js.LICENSE",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.5cca61a5.js",
     "static/js/2.95963926.chunk.js",
     "static/css/main.f63b4555.chunk.css",
-    "static/js/main.e8b4048f.chunk.js"
+    "static/js/main.ce6af4b8.chunk.js"
   ]
 }
