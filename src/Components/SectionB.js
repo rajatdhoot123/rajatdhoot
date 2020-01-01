@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import development from "../Images/development.png";
+import { WhatIDOPointes } from "../Constants/String";
 
-const WhatIDO = ({ image }) => (
+const WhatIDO = ({ image, heading, text }) => (
   <WhatIDOWrapper>
     <div className="image-with-text">
       <div
@@ -20,17 +20,17 @@ const WhatIDO = ({ image }) => (
             maxWidth: "75px",
             borderRadius: "50%"
           }}
-          alt="madarchof"
+          alt="Suouce"
         />
       </div>
-      <div className="text-center" style={{ padding: "1rem", paddingLeft: "0px" }}>
+      <div
+        className="text-center"
+        style={{ padding: "1rem", paddingLeft: "0px" }}
+      >
         <h4 style={{ marginTop: "0.5rem", marginBottom: "0.5rem" }}>
-          Landing Pages
+          {heading}
         </h4>
-        <span style={{ color: "#abb0c8" }}>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </span>
+        <span style={{ color: "#abb0c8" }}>{text}</span>
       </div>
     </div>
   </WhatIDOWrapper>
@@ -55,12 +55,9 @@ const SectionB = () => {
           </div>
 
           <div style={{ display: "flex", flexWrap: "wrap" }}>
-            <WhatIDO image={development} />
-            <WhatIDO image={development} />
-            <WhatIDO image={development} />
-            <WhatIDO image={development} />
-            <WhatIDO image={development} />
-            <WhatIDO image={development} />
+            {WhatIDOPointes.map(({ text, heading, image }) => (
+              <WhatIDO image={image} heading={heading} text={text} />
+            ))}
           </div>
         </CardBody>
       </Card>

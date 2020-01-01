@@ -23,8 +23,12 @@ const SectionA = () => {
           <h3 style={{ letterSpacing: "0.2rem" }}>
             <span style={{ color: "#ee596a" }}>Hello,</span> I am Rajat Dhoot
           </h3>
-          <h1>Software Developer</h1>
-          <h6>Design Website moslty powered by javascript</h6>
+          <h1 style={{ marginTop: "0.5rem", marginBottom: "0.5rem" }}>
+            Software Developer
+          </h1>
+          <h6 style={{ marginTop: "0.5rem", marginBottom: "0.5rem" }}>
+            Design Website moslty powered by javascript
+          </h6>
         </div>
         <div style={{ right: "0", position: "absolute", display: "flex" }}>
           <div
