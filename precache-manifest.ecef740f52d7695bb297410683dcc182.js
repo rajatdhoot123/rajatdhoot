@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8c57841da761cc52136c0c0804aa94d1",
+    "revision": "60cac510a6976a909e0e996a0074948a",
     "url": "/rajatdhoot/index.html"
   },
   {
-    "revision": "ee2416996aa3fe8d51e1",
-    "url": "/rajatdhoot/static/css/main.5ecd60fb.chunk.css"
+    "revision": "9c7a3ecbd39cadfdbcbe",
+    "url": "/rajatdhoot/static/css/main.f63b4555.chunk.css"
   },
   {
     "revision": "ea98b2cc4402b518591b",
@@ -16,12 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rajatdhoot/static/js/2.95963926.chunk.js.LICENSE"
   },
   {
-    "revision": "ee2416996aa3fe8d51e1",
+    "revision": "9c7a3ecbd39cadfdbcbe",
     "url": "/rajatdhoot/static/js/main.e8b4048f.chunk.js"
   },
   {
     "revision": "6e51a6d59274d1327505",
     "url": "/rajatdhoot/static/js/runtime-main.5cca61a5.js"
+  },
+  {
+    "revision": "638dab656e6ab7ba2043996d2281b1a7",
+    "url": "/rajatdhoot/static/media/AvertaDemoPE-Regular.638dab65.otf"
   },
   {
     "revision": "180a6ca60002b6b9a88b1977232f25fb",

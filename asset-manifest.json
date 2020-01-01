@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/rajatdhoot/static/css/main.5ecd60fb.chunk.css",
+    "main.css": "/rajatdhoot/static/css/main.f63b4555.chunk.css",
     "main.js": "/rajatdhoot/static/js/main.e8b4048f.chunk.js",
     "main.js.map": "/rajatdhoot/static/js/main.e8b4048f.chunk.js.map",
     "runtime-main.js": "/rajatdhoot/static/js/runtime-main.5cca61a5.js",
@@ -8,10 +8,11 @@
     "static/js/2.95963926.chunk.js": "/rajatdhoot/static/js/2.95963926.chunk.js",
     "static/js/2.95963926.chunk.js.map": "/rajatdhoot/static/js/2.95963926.chunk.js.map",
     "index.html": "/rajatdhoot/index.html",
-    "precache-manifest.5f4bb57d77cb7a527776c21009a9d5f8.js": "/rajatdhoot/precache-manifest.5f4bb57d77cb7a527776c21009a9d5f8.js",
+    "precache-manifest.ecef740f52d7695bb297410683dcc182.js": "/rajatdhoot/precache-manifest.ecef740f52d7695bb297410683dcc182.js",
     "service-worker.js": "/rajatdhoot/service-worker.js",
-    "static/css/main.5ecd60fb.chunk.css.map": "/rajatdhoot/static/css/main.5ecd60fb.chunk.css.map",
+    "static/css/main.f63b4555.chunk.css.map": "/rajatdhoot/static/css/main.f63b4555.chunk.css.map",
     "static/js/2.95963926.chunk.js.LICENSE": "/rajatdhoot/static/js/2.95963926.chunk.js.LICENSE",
+    "static/media/index.css": "/rajatdhoot/static/media/AvertaDemoPE-Regular.638dab65.otf",
     "static/media/facebook.180a6ca6.svg": "/rajatdhoot/static/media/facebook.180a6ca6.svg",
     "static/media/linkedin.beb71356.svg": "/rajatdhoot/static/media/linkedin.beb71356.svg",
     "static/media/twitter.43449f1c.svg": "/rajatdhoot/static/media/twitter.43449f1c.svg"
@@ -19,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.5cca61a5.js",
     "static/js/2.95963926.chunk.js",
-    "static/css/main.5ecd60fb.chunk.css",
+    "static/css/main.f63b4555.chunk.css",
     "static/js/main.e8b4048f.chunk.js"
   ]
 }
