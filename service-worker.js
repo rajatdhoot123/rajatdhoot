@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/rajatdhoot/precache-manifest.b8134f1f4049af358985c3b8aeea7696.js"
+  "/rajatdhoot/precache-manifest.855157bf335436f81ab3fa51ab5b9138.js"
 );
 
 self.addEventListener('message', (event) => {
