@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { PaddingY } from "../Components/CssComponents";
 import { postData } from "../api";
-const SectionC = () => {
-  const [state, setState] = useState({ name: "", email: "", message: "" });
 
+const initalState = { name: "", email: "", message: "" };
+const SectionC = () => {
+  const [state, setState] = useState(initalState);
+  const [apiState, setApiStatus] = useState({ error: null });
   const handleInput = e => {
     const name = e.target.name;
     const value = e.target.value;
@@ -16,10 +18,22 @@ const SectionC = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    const form = event.target;
-    postData("https://formspree.io/mwkvyqzd", new FormData(form))
-      .then(res => console.warn({ res: res.json() }))
-      .catch(err => console.warn({ err }));
+    postData("https://formspree.io/mwkvyqzd", state)
+      .then(({ ok, next }) => {
+        setState(initalState)
+        setApiStatus({
+          error: null,
+          success: true
+        });
+        alert(`Your message was sent successfully. Thanks!`)
+      })
+      .catch(err => {
+        setApiStatus({
+          error: err,
+          success: false
+        });
+        alert(`Unable to send message`)
+      });
   };
   return (
     <div
