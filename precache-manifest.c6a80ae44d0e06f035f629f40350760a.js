@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "390d8394c8c51e4743407ea17067a746",
+    "revision": "9c019c375148824c8bc1dc22e8cdfe77",
     "url": "/rajatdhoot/index.html"
   },
   {
-    "revision": "9034f11137d6a3bfd4b2",
+    "revision": "a93889879297729a2ed7",
     "url": "/rajatdhoot/static/css/main.f63b4555.chunk.css"
   },
   {
-    "revision": "ea98b2cc4402b518591b",
-    "url": "/rajatdhoot/static/js/2.95963926.chunk.js"
+    "revision": "cf4b5f5eb4b77e9cd8ca",
+    "url": "/rajatdhoot/static/js/2.8af7bcd5.chunk.js"
   },
   {
     "revision": "fd228f9b9a68ce6b23a6cf8b0a38a0e3",
-    "url": "/rajatdhoot/static/js/2.95963926.chunk.js.LICENSE"
+    "url": "/rajatdhoot/static/js/2.8af7bcd5.chunk.js.LICENSE"
   },
   {
-    "revision": "9034f11137d6a3bfd4b2",
-    "url": "/rajatdhoot/static/js/main.ce6af4b8.chunk.js"
+    "revision": "a93889879297729a2ed7",
+    "url": "/rajatdhoot/static/js/main.8722cf3b.chunk.js"
   },
   {
     "revision": "6e51a6d59274d1327505",
@@ -38,5 +38,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "43449f1c48de00f0ef903fcacf487626",
     "url": "/rajatdhoot/static/media/twitter.43449f1c.svg"
+  },
+  {
+    "revision": "8d7b701bc94b7bef4e6c9faca9471178",
+    "url": "/rajatdhoot/static/media/webapp.8d7b701b.jpg"
   }
 ]);
