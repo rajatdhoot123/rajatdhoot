@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const PaddingY = styled.div(
+  ({ unit = "initial" }) => `
+padding-top: ${unit}
+padding-bottom:${unit}
+`
+);
+
 export const VerticalNav = styled.div`
   top: 50%;
   z-index: 1;

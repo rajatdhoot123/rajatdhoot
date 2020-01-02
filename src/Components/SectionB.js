@@ -56,7 +56,7 @@ const SectionB = () => {
 
           <div style={{ display: "flex", flexWrap: "wrap" }}>
             {WhatIDOPointes.map(({ text, heading, image }) => (
-              <WhatIDO image={image} heading={heading} text={text} />
+              <WhatIDO key={heading} image={image} heading={heading} text={text} />
             ))}
           </div>
         </CardBody>

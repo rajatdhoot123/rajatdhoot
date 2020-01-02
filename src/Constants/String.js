@@ -1,7 +1,7 @@
 import WebPerformance from "../Images/WebPerformance.png"
 import UIUX from "../Images/UI_UX.png"
 import Responsive from "../Images/Responsive.png"
-import Webapp from "../Images/Webapp.png"
+import Webapp from "../Images/webapp.jpg"
 
 export const WhatIDOPointes = [
   {
