@@ -38,7 +38,7 @@ const WhatIDO = ({ image, heading, text }) => (
 
 const SectionB = () => {
   return (
-    <div id="sectionB" style={{ display: "flex", height: "100vh" }}>
+    <div id="info" style={{ display: "flex", height: "100vh" }}>
       <Card>
         <CardBody>
           <div

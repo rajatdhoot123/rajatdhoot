@@ -10,15 +10,15 @@ function App() {
       <div className="app-top">
         <VerticalNav>
           <div
-            onClick={() => (window.location.href = "#sectionA")}
+            onClick={() => (window.location.href = "#hero")}
             className="circle small"
           ></div>
           <div
-            onClick={() => (window.location.href = "#sectionB")}
+            onClick={() => (window.location.href = "#info")}
             className="circle small"
           ></div>
           <div
-            onClick={() => (window.location.href = "#sectionC")}
+            onClick={() => (window.location.href = "#contact")}
             className="circle small"
           ></div>
         </VerticalNav>

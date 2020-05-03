@@ -9,7 +9,7 @@ const SectionA = () => {
     window.open(SOCIAL_LINK[media], "_blank");
   };
   return (
-    <div id="sectionA" style={{ height: "100vh" }}>
+    <div id="hero" style={{ height: "100vh" }}>
       <div
         style={{
           textTransform: "uppercase",

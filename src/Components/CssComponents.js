@@ -7,6 +7,13 @@ padding-bottom:${unit}
 `
 );
 
+export const MarginY = styled.div(
+  ({ unit = "initial" }) => `
+margin-top: ${unit}
+margin-bottom:${unit}
+`
+);
+
 export const VerticalNav = styled.div`
   top: 50%;
   z-index: 1;

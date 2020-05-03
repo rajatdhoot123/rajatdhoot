@@ -37,7 +37,7 @@ const SectionC = () => {
   };
   return (
     <div
-      id="sectionC"
+      id="contact"
       style={{
         height: "100vh",
         display: "flex",
@@ -46,8 +46,8 @@ const SectionC = () => {
       }}
     >
       <div>
-        <h2>Contact</h2>
-        <h4>Have a question or want to work together?</h4>
+        <h2 style={{textAlign: "center"}}>Contact</h2>
+        <h4 style={{textAlign: "center"}}>Have a question or want to work together?</h4>
         <div>
           <form
             method="POST"
