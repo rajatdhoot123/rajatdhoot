@@ -3,13 +3,13 @@ import { ReactComponent as LinkedIn } from "../Images/linkedin.svg";
 import { ReactComponent as Twitter } from "../Images/twitter.svg";
 import { ReactComponent as Facebook } from "../Images/facebook.svg";
 import { SOCIAL_LINK } from "../Constants"
-const SectionA = () => {
+const SectionA = React.forwardRef((props, ref) => {
 
   const handleSocialMedia = media => {
     window.open(SOCIAL_LINK[media], "_blank");
   };
   return (
-    <div id="hero" style={{ height: "100vh" }}>
+    <div ref={ref} id="hero" style={{ height: "100vh" }}>
       <div
         style={{
           textTransform: "uppercase",
@@ -92,6 +92,6 @@ const SectionA = () => {
       </div>
     </div>
   );
-};
+});
 
 export default SectionA;

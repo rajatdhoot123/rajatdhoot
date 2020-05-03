@@ -10,7 +10,7 @@ const WhatIDO = ({ image, heading, text }) => (
           padding: "1rem",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center"
+          alignItems: "center",
         }}
       >
         <img
@@ -18,7 +18,7 @@ const WhatIDO = ({ image, heading, text }) => (
           style={{
             maxHeight: "75px",
             maxWidth: "75px",
-            borderRadius: "50%"
+            borderRadius: "50%",
           }}
           alt="Suouce"
         />
@@ -36,16 +36,16 @@ const WhatIDO = ({ image, heading, text }) => (
   </WhatIDOWrapper>
 );
 
-const SectionB = () => {
+const SectionB = React.forwardRef((props, ref) => {
   return (
-    <div id="info" style={{ display: "flex", height: "100vh" }}>
+    <div ref={ref} id="info" style={{ display: "flex", height: "100vh" }}>
       <Card>
         <CardBody>
           <div
             style={{
               display: "flex",
               justifyContent: "center",
-              marginTop: "4rem"
+              marginTop: "4rem",
             }}
           >
             <div style={{ textTransform: "uppercase", textAlign: "center" }}>
@@ -56,14 +56,19 @@ const SectionB = () => {
 
           <div style={{ display: "flex", flexWrap: "wrap" }}>
             {WhatIDOPointes.map(({ text, heading, image }) => (
-              <WhatIDO key={heading} image={image} heading={heading} text={text} />
+              <WhatIDO
+                key={heading}
+                image={image}
+                heading={heading}
+                text={text}
+              />
             ))}
           </div>
         </CardBody>
       </Card>
     </div>
   );
-};
+});
 
 const Card = styled.div`
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);

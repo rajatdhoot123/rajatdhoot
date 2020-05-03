@@ -4,7 +4,7 @@ import { PaddingY } from "../Components/CssComponents";
 import { postData } from "../api";
 
 const initalState = { name: "", email: "", message: "" };
-const SectionC = () => {
+const SectionC = React.forwardRef((props, ref) => {
   const [state, setState] = useState(initalState);
   const [apiState, setApiStatus] = useState({ error: null });
   const handleInput = e => {
@@ -37,6 +37,7 @@ const SectionC = () => {
   };
   return (
     <div
+      ref={ref}
       id="contact"
       style={{
         height: "100vh",
@@ -94,7 +95,7 @@ const SectionC = () => {
       </div>
     </div>
   );
-};
+});
 
 const Input = styled.input`
   height: 2.4rem;
