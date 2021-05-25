@@ -44,7 +44,7 @@ const SectionA = React.forwardRef((props, ref) => {
               paddingRight: "0px",
             }}
           >
-            <img src="/linkedin.svg" />
+            <img src="/rajatdhoot/linkedin.svg" />
           </div>
           <div
             style={{
@@ -68,7 +68,7 @@ const SectionA = React.forwardRef((props, ref) => {
                 alignItems: "center",
               }}
             >
-              <img src="/twitter.svg" />
+              <img src="/rajatdhoot/twitter.svg" />
             </div>
             <div
               onClick={handleSocialMedia.bind(null, "FACEBOOK")}
@@ -81,7 +81,7 @@ const SectionA = React.forwardRef((props, ref) => {
                 alignItems: "center",
               }}
             >
-              <img src="/facebook.svg" />
+              <img src="/rajatdhoot/facebook.svg" />
             </div>
           </div>
         </div>
