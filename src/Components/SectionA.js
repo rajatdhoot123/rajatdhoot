@@ -1,11 +1,7 @@
 import React from "react";
-import { ReactComponent as LinkedIn } from "../Images/linkedin.svg";
-import { ReactComponent as Twitter } from "../Images/twitter.svg";
-import { ReactComponent as Facebook } from "../Images/facebook.svg";
-import { SOCIAL_LINK } from "../Constants"
+import { SOCIAL_LINK } from "../Constants";
 const SectionA = React.forwardRef((props, ref) => {
-
-  const handleSocialMedia = media => {
+  const handleSocialMedia = (media) => {
     window.open(SOCIAL_LINK[media], "_blank");
   };
   return (
@@ -16,7 +12,7 @@ const SectionA = React.forwardRef((props, ref) => {
           position: "absolute",
           top: "50%",
           transform: "translateY(-50%)",
-          width: "100%"
+          width: "100%",
         }}
       >
         <div style={{ marginLeft: "20%", position: "relative" }}>
@@ -45,10 +41,10 @@ const SectionA = React.forwardRef((props, ref) => {
               justifyContent: "center",
               alignItems: "center",
               padding: "10px",
-              paddingRight: "0px"
+              paddingRight: "0px",
             }}
           >
-            <LinkedIn />
+            <img src="/linkedin.svg" />
           </div>
           <div
             style={{
@@ -58,7 +54,7 @@ const SectionA = React.forwardRef((props, ref) => {
               display: "flex",
               alignItems: "center",
               padding: "10px",
-              paddingLeft: "0px"
+              paddingLeft: "0px",
             }}
           >
             <div
@@ -69,10 +65,10 @@ const SectionA = React.forwardRef((props, ref) => {
                 width: "50px",
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
-              <Twitter />
+              <img src="/twitter.svg" />
             </div>
             <div
               onClick={handleSocialMedia.bind(null, "FACEBOOK")}
@@ -82,10 +78,10 @@ const SectionA = React.forwardRef((props, ref) => {
                 width: "50px",
                 display: "flex",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
-              <Facebook />
+              <img src="/facebook.svg" />
             </div>
           </div>
         </div>
