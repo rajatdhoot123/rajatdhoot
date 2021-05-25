@@ -13,13 +13,14 @@
     "styled-components": "^4.4.1"
   },
   "scripts": {
+    "export": "next build && next export",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d out"
   },
   "eslintConfig": {
     "extends": "react-app"
