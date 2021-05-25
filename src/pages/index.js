@@ -38,43 +38,27 @@ function App() {
     }
   }, []);
   return (
-    <>
-      <BackgroundGradient>
-        <div className="app-top">
-          <VerticalNav>
-            <div
-              onClick={() => (window.location.href = "#hero")}
-              className="circle small"
-            ></div>
-            <div
-              onClick={() => (window.location.href = "#info")}
-              className="circle small"
-            ></div>
-            <div
-              onClick={() => (window.location.href = "#contact")}
-              className="circle small"
-            ></div>
-          </VerticalNav>
-        </div>
-        <SectionA ref={hero} />
-        <SectionB ref={info} />
-        <SectionC ref={contact} />
-      </BackgroundGradient>
-      <style global jsx>{`
-        body {
-          margin: 0;
-          font-family: "Averta";
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
-
-        @font-face {
-          font-family: "Averta";
-          src: local("Averta"),
-            url(./fonts/Averta/AvertaDemoPE-Regular.otf) format("woff");
-        }
-      `}</style>
-    </>
+    <BackgroundGradient>
+      <div className="app-top">
+        <VerticalNav>
+          <div
+            onClick={() => (window.location.href = "#hero")}
+            className="circle small"
+          ></div>
+          <div
+            onClick={() => (window.location.href = "#info")}
+            className="circle small"
+          ></div>
+          <div
+            onClick={() => (window.location.href = "#contact")}
+            className="circle small"
+          ></div>
+        </VerticalNav>
+      </div>
+      <SectionA ref={hero} />
+      <SectionB ref={info} />
+      <SectionC ref={contact} />
+    </BackgroundGradient>
   );
 }
 
