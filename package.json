@@ -19,7 +19,7 @@
     "start": "next start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn export && touch out/.nojekyll && gh-pages -t -d out"
+    "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "eslintConfig": {
     "extends": "react-app"
