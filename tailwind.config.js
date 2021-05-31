@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Karla"],
+        sans: ["Josefin Sans"],
       },
     },
   },
