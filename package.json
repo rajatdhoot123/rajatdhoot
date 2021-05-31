@@ -17,6 +17,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "deploygh": "gh-pages -d out",
     "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "eslintConfig": {

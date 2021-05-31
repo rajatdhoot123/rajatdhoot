@@ -1,0 +1,20 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Poppins:ital,wght@0,200;0,300;1,600&display=swap');
+
+
+.a4-page {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+@media print {
+  .a4-page {
+    margin: 0;
+    box-shadow: 0;
+  }
+}
