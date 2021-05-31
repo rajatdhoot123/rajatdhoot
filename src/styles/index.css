@@ -1,23 +1,22 @@
-body {
-  margin: 0;
-  font-family: "Averta";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-* {
-  margin: 0;
-  padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Poppins:ital,wght@0,200;0,300;1,600&display=swap');
 
-@font-face {
-  font-family: "Averta";
-  src: local("Averta"),
-    url(../fonts/Averta/AvertaDemoPE-Regular.otf) format("woff");
-}
 
-.no-style-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+.a4-page {
+  background: white;
+  width: 21cm;
+  height: 29.7cm;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+@media print {
+  .a4-page {
+    margin: 0;
+    box-shadow: 0;
+  }
 }

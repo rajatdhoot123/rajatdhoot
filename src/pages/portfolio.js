@@ -1,7 +1,9 @@
 const WORK = [
   {
+    company: "Ownership of consumer facing product kukufm.com",
     duration: "Feb 2020 - Present | India",
     name: "Kukufm",
+    designation: "Senior Frontend Developer",
     work: [
       "Ownership of consumer facing product kukufm.com",
       "Migrate site from client side to server side using Next js",
@@ -11,38 +13,48 @@ const WORK = [
     ],
   },
   {
-    duration: "Feb 2020 - Present | India",
+    company:
+      "Zomato is an Indian multinational restaurant aggregator and food delivery company. Zomato provides information, menus and user-reviews of restaurants as well as food delivery options from partner restaurants",
+    duration: "July 2018 - Nov 2019 | India",
     name: "Zomato",
+    designation: "Software Developer",
     work: [
-      "Ownership of consumer facing product kukufm.com",
-      "Migrate site from client side to server side using Next js",
-      "Build all the product from scratch.",
-      "Responsible for end to end (developing to deployment)",
-      "Develop many campains to boost product growth",
+      "Build zomato chat support client for customer",
+      "Build smart dashboard for customer support with prefilled order details for quick resolution",
+      "Build merchant order management dashboard",
+      "Build merchant onboarding dashboard (Do it yourself)",
+      "Work on Zomato design system (Sushi)",
     ],
   },
   {
-    duration: "Feb 2020 - Present | India",
+    company:
+      "Platform to make fundraising easier for startups. LetsVenture web platform enables startups looking to raise seed / angel money to create investment ready profiles online, and connect to accredited Investors.",
+    duration: "June 2017 - May 2018 | India",
     name: "Letsventure",
+    designation: "Frontend Developer",
     work: [
-      "Ownership of consumer facing product kukufm.com",
-      "Migrate site from client side to server side using Next js",
-      "Build all the product from scratch.",
-      "Responsible for end to end (developing to deployment)",
-      "Develop many campains to boost product growth",
+      "Skills Learned and used - Javascript, Node, HTML/CSS",
+      "Developed user friendly website",
+      "Fix bugs from existing website and implemented enhancements that significantly improved webfunctionality and speed",
     ],
   },
 ];
 
-const CompanyBox = ({ name, duration, work }) => (
+const SubHeading = ({ children }) => (
+  <h2 className="text-2xl my-2">{children}</h2>
+);
+const Title = ({ children }) => <h3 className="text-xl">{children}</h3>;
+
+const CompanyBox = ({ name, duration, work, designation, company }) => (
   <>
-    <div style={{ display: "flex", alignItems: "center" }}>
-      <h3>{name}</h3>
+    <div className="flex items-center">
+      <div className="font-bold">{name}</div>
       <div style={{ margin: "10px" }}>|</div>
-      <span>Senior Frontend Developer</span>
+      <span>{designation}</span>
     </div>
     <h4>{duration}</h4>
-    <ul class="no-style-ul">
+    <p className="mb-2">{company}</p>
+    <ul className="list-inside	list-disc">
       {work.map((wr) => (
         <li key={wr}>{wr}</li>
       ))}
@@ -52,16 +64,10 @@ const CompanyBox = ({ name, duration, work }) => (
 
 const Portfolio = () => {
   return (
-    <div>
-      <div style={{ textAlign: "center", margin: "10px" }}>
-        <h1 style={{ margin: "0px" }}>Rajat Dhoot</h1>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
+    <div className="a4-page p-5">
+      <div>
+        <h1 className="text-center text-3xl">Rajat Dhoot</h1>
+        <div className="flex justify-center items-center">
           <span>
             <p>
               <a href="mailto:someone@example.com">
@@ -69,45 +75,49 @@ const Portfolio = () => {
               </a>
             </p>
           </span>
-          <span style={{ margin: "5px" }}>|</span>
+          <span className="m-5">|</span>
           <span>
             <a href="tel:+918855866494">Ph: +91 8855866494</a>
           </span>
         </div>
       </div>
-      <div style={{ width: "100%", display: "flex" }}>
-        <div style={{ width: "30%" }}>
+      <div className="flex">
+        <div>
           <div>
-            <h2>Education</h2>
-            <h3 style={{ margin: "0" }}>University</h3>
+            <SubHeading>Education</SubHeading>
+            <Title>University</Title>
             <h4>Bachlers of Engg</h4>
             <h4>Computer Scinence</h4>
             <h4>Pune University June 2016 | India</h4>
           </div>
           <div>
-            <h2>Links</h2>
-            <ul class="no-style-ul">
+            <SubHeading>Links</SubHeading>
+            <ul>
               <li>
                 <a href="#" target="_blank" rel="noopener noreferrer">
-                  Linkedin: https://www.linkedin.com/in/rajatdhoot
+                  <div>Linkedin</div>
+                  <div>https://www.linkedin.com/in/rajatdhoot</div>
                 </a>
               </li>
               <li>
                 <a href="#" target="_blank" rel="noopener noreferrer">
-                  Github: https://github.com/rajatdhoot123
+                  <div>Github</div>
+                  <div>https://github.com/rajatdhoot123</div>
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div style={{ width: "70%" }}>
-          <h2>Work Experience</h2>
-          {WORK.map(({ name, duration, work = [] }) => (
+        <div>
+          <SubHeading>Work Experience</SubHeading>
+          {WORK.map(({ name, duration, work = [], designation, company }) => (
             <CompanyBox
+              company={company}
               key={name}
               work={work}
               name={name}
               duration={duration}
+              designation={designation}
             />
           ))}
         </div>
