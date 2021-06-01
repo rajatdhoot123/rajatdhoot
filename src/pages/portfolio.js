@@ -1,3 +1,17 @@
+const contact = [
+  { title: "Address", value: "Indore MP, 450001" },
+  { title: "Phone", value: "+91 8855866494" },
+  { title: "Email", value: "rajatdhoot123@gmail.com" },
+];
+
+const Para = ({ children }) => (
+  <div className="text-sm text-gray-500">{children}</div>
+);
+
+const Title = ({ children }) => (
+  <h3 className="font-medium text-gray-800 text-opacity-80">{children}</h3>
+);
+
 const Links = [
   { title: "Github", link: "github.com/rajatdhoot123" },
   { title: "Linkedin", link: "www.linkedin.com/in/rajatdhoot" },
@@ -5,7 +19,7 @@ const Links = [
 ];
 
 const SKILLS = [
-  { title: "Language", data: ["Javascript", "HTML", "CSS", "PHP"] },
+  { title: "Language", data: ["Javascript", "HTML", "CSS", "PHP", "SEO"] },
   {
     title: "Framework/Library",
     data: [
@@ -81,77 +95,91 @@ const WORK = [
 ];
 
 const SubHeading = ({ children }) => <h2 className="text-2xl">{children}</h2>;
-const Title = ({ children }) => <h3 className="text-xl">{children}</h3>;
+// const Title = ({ children }) => <h3 className="text-xl">{children}</h3>;
 
 const CompanyBox = ({ name, duration, work, designation, company }) => (
   <>
-    <div className="flex items-center">
-      <div className="font-bold">{name}</div>
-      <div style={{ margin: "10px" }}>|</div>
-      <span>{designation}</span>
+    <div>
+      <h3 className="font-bold head-gray text-sm">{designation}</h3>
+      <div className="flex items-center font-semibold head-gray text-sm">
+        <div className="">{name}, &nbsp;</div>
+        <h4>{duration}</h4>
+      </div>
     </div>
-    <h4>{duration}</h4>
-    <p className="mb-2">{company}</p>
-    <ul className="list-inside	list-disc">
-      {work.map((wr) => (
-        <li key={wr}>{wr}</li>
-      ))}
-    </ul>
+    <div className="text-sm head-gray my-2">{company}</div>
+    <div className="text-sm head-gray">
+      <ul className="list-inside	list-disc">
+        {work.map((wr) => (
+          <li key={wr}>{wr}</li>
+        ))}
+      </ul>
+    </div>
   </>
 );
 
 const Portfolio = () => {
   return (
-    <div className="a4-page p-5">
-      <div>
-        <h1 className="text-center text-3xl">Rajat Dhoot</h1>
-        <div className="flex justify-center items-center">
-          <span>
+    <div className="a4-page">
+      <div className="p-5">
+        <h1 className="text-4xl font-bold base-blue">Rajat Dhoot</h1>
+        <div className="font-normal	my-2 head-gray">
+          Software Developer
+          {/* <span>
             <p>
               <a href="mailto:someone@example.com">
                 Email: rajatdhoot123@gmail.com
               </a>
             </p>
           </span>
-          <span className="m-5">|</span>
           <span>
             <a href="tel:+918855866494">Ph: +91 8855866494</a>
           </span>
+          */}
         </div>
       </div>
-      <div className="flex">
-        <div>
+      <div className="flex p-5 pt-0 border-t-2 border-black border-opacity-10">
+        <div className="p-5 border-r-2 border-black border-opacity-10">
+          <div className="text-center"></div>
+          <div className="base-blue font-bold">Contact</div>
+          {contact.map(({ title, value }) => (
+            <div className="my-3">
+              <div className="text-sm font-bold">{title}</div>
+              <div className="text-sm text-gray">{value} </div>
+            </div>
+          ))}
           <div className="mb-5">
-            <SubHeading>Education</SubHeading>
-            <Title>University</Title>
-            <h4>Bachelor of Engineering</h4>
-            <h4>Computer science</h4>
-            <h4>Pune University June 2016 | India</h4>
+            <div className="base-blue font-bold">Education</div>
+            <div className="text-sm font-bold">University</div>
+            <div className="text-sm text-gray">
+              <h4>Bachelor of Engineering</h4>
+              <h4>Computer science</h4>
+              <h4>Pune University June 2016 | India</h4>
+            </div>
           </div>
           <div className="my-5">
-            <SubHeading>Links</SubHeading>
+            <div className="base-blue font-bold">Links</div>
             <ul>
               {Links.map(({ title, link }) => (
-                <li className="mb-2" key={link}>
+                <li className="mb-3" key={link}>
                   <a href={link} target="_blank" rel="noopener noreferrer">
-                    <div>{title}</div>
-                    <div>{link}</div>
+                    <div className="text-sm font-bold">{title}</div>
+                    <div className="text-sm text-gray">{link}</div>
                   </a>
                 </li>
               ))}
             </ul>
           </div>
           <div className="my-5">
-            <SubHeading>Skills</SubHeading>
+            <div className="base-blue font-bold">Skills</div>
             <ul>
               {SKILLS.map(({ title, data }) => (
-                <li className="mb-2" key={title}>
-                  <div>{title}</div>
+                <li className="my-3" key={title}>
+                  <div className="text-sm font-bold">{title}</div>
                   <div className="flex flex-wrap">
                     {data.map((el) => (
-                      <span className="ml-2" key={el}>
-                        {el}
-                      </span>
+                      <div className="text-sm text-gray" key={el}>
+                        {el}&nbsp;
+                      </div>
                     ))}
                   </div>
                 </li>
@@ -159,32 +187,18 @@ const Portfolio = () => {
             </ul>
           </div>
           <div className="my-5">
-            <SubHeading>Side Projects</SubHeading>
-            <ul className="flex flex-wrap">
-              {SIDE_PROJECTS.map(({ title, description, link }) => (
-                <li className="m-2" key={title}>
-                  <div>{title}</div>
-                  <div>{description}</div>
-                  <a href={link} target="_blank" rel="noopener noreferrer">
-                    {link}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="my-5">
-            <SubHeading>Intrest</SubHeading>
+            <div className="base-blue font-bold">Interest</div>
             <ul className="flex flex-wrap">
               {INTREST.map((el) => (
-                <li className="m-2" key={el}>
-                  <div>{el}</div>
+                <li key={el}>
+                  <div className="text-sm text-gray">{el} &nbsp;</div>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        <div className="m-5 mt-0">
-          <SubHeading>Work Experience</SubHeading>
+        <div className="m-5">
+          <div className="base-blue font-bold">Experiences</div>
           {WORK.map(({ name, duration, work = [], designation, company }) => (
             <div className="mb-5" key={name}>
               <CompanyBox
@@ -197,6 +211,26 @@ const Portfolio = () => {
               />
             </div>
           ))}
+
+          <div className="my-5">
+            <div className="base-blue font-bold">Side Projects</div>
+            <ul className="flex flex-wrap">
+              {SIDE_PROJECTS.map(({ title, description, link }) => (
+                <li className="my-3" key={title}>
+                  <div className="text-sm font-bold">{title}</div>
+                  <div className="text-sm text-gray">{description}</div>
+                  <a
+                    className="text-sm text-gray-500"
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
