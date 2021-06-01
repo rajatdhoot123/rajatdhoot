@@ -1,26 +1,66 @@
+const Links = [
+  { title: "Github", link: "github.com/rajatdhoot123" },
+  { title: "Linkedin", link: "www.linkedin.com/in/rajatdhoot" },
+  { title: "Website", link: "rajatdhoot123.github.io/rajatdhoot" },
+];
+
+const SKILLS = [
+  { title: "Language", data: ["Javascript", "HTML", "CSS", "PHP"] },
+  {
+    title: "Framework/Library",
+    data: [
+      "React",
+      "Node",
+      "Express",
+      "Nextjs",
+      "Mongodb",
+      "React Native",
+      "Firebase",
+      "Redux",
+    ],
+  },
+  { title: "Familiar", data: ["AWS", "Python"] },
+];
+
+const INTREST = ["Travelling", "Gadgets", "Cricket", "Table Tennis"];
+
+const SIDE_PROJECTS = [
+  {
+    title: "Movie Dovie",
+    description: "Show you the common matches of movie to watch together",
+    link: "https://bit.ly/2SEXu7n",
+  },
+  {
+    title: "Courier Api",
+    description: "Get json traking details of courier vendors",
+    link: "https://bit.ly/3i7KOk7",
+  },
+];
+
 const WORK = [
   {
-    company: "Ownership of consumer facing product kukufm.com",
+    company:
+      "Kuku FM is a podcast platform that is re-inventing the traditional radio by more diverse audio contents",
     duration: "Feb 2020 - Present | India",
     name: "Kukufm",
     designation: "Senior Frontend Developer",
     work: [
-      "Ownership of consumer facing product kukufm.com",
-      "Migrate site from client side to server side using Next js",
-      "Build all the product from scratch.",
-      "Responsible for end to end (developing to deployment)",
-      "Develop many campains to boost product growth",
+      "Full Ownership of consumer-facing product kukufm.com",
+      "Migration of site from client to server by using next js",
+      "Build all the products from scratch.",
+      "Responsible for handling projects from start to end (developing to deployment)",
+      "Develop multiple campaigns to boost product growth",
     ],
   },
   {
     company:
-      "Zomato is an Indian multinational restaurant aggregator and food delivery company. Zomato provides information, menus and user-reviews of restaurants as well as food delivery options from partner restaurants",
+      "Zomato is an Indian multinational restaurant aggregator and food delivery company. Zomato provides information, menus, and user-reviews of restaurants as well as food delivery options from partner restaurants",
     duration: "July 2018 - Nov 2019 | India",
     name: "Zomato",
     designation: "Software Developer",
     work: [
       "Build zomato chat support client for customer",
-      "Build smart dashboard for customer support with prefilled order details for quick resolution",
+      "Build a smart dashboard for customer support with prefilled order details for quick resolution",
       "Build merchant order management dashboard",
       "Build merchant onboarding dashboard (Do it yourself)",
       "Work on Zomato design system (Sushi)",
@@ -40,9 +80,7 @@ const WORK = [
   },
 ];
 
-const SubHeading = ({ children }) => (
-  <h2 className="text-2xl my-2">{children}</h2>
-);
+const SubHeading = ({ children }) => <h2 className="text-2xl">{children}</h2>;
 const Title = ({ children }) => <h3 className="text-xl">{children}</h3>;
 
 const CompanyBox = ({ name, duration, work, designation, company }) => (
@@ -83,42 +121,81 @@ const Portfolio = () => {
       </div>
       <div className="flex">
         <div>
-          <div>
+          <div className="mb-5">
             <SubHeading>Education</SubHeading>
             <Title>University</Title>
-            <h4>Bachlers of Engg</h4>
-            <h4>Computer Scinence</h4>
+            <h4>Bachelor of Engineering</h4>
+            <h4>Computer science</h4>
             <h4>Pune University June 2016 | India</h4>
           </div>
-          <div>
+          <div className="my-5">
             <SubHeading>Links</SubHeading>
             <ul>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <div>Linkedin</div>
-                  <div>https://www.linkedin.com/in/rajatdhoot</div>
-                </a>
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <div>Github</div>
-                  <div>https://github.com/rajatdhoot123</div>
-                </a>
-              </li>
+              {Links.map(({ title, link }) => (
+                <li className="mb-2" key={link}>
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    <div>{title}</div>
+                    <div>{link}</div>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="my-5">
+            <SubHeading>Skills</SubHeading>
+            <ul>
+              {SKILLS.map(({ title, data }) => (
+                <li className="mb-2" key={title}>
+                  <div>{title}</div>
+                  <div className="flex flex-wrap">
+                    {data.map((el) => (
+                      <span className="ml-2" key={el}>
+                        {el}
+                      </span>
+                    ))}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="my-5">
+            <SubHeading>Side Projects</SubHeading>
+            <ul className="flex flex-wrap">
+              {SIDE_PROJECTS.map(({ title, description, link }) => (
+                <li className="m-2" key={title}>
+                  <div>{title}</div>
+                  <div>{description}</div>
+                  <a href={link} target="_blank" rel="noopener noreferrer">
+                    {link}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="my-5">
+            <SubHeading>Intrest</SubHeading>
+            <ul className="flex flex-wrap">
+              {INTREST.map((el) => (
+                <li className="m-2" key={el}>
+                  <div>{el}</div>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-        <div>
+        <div className="m-5 mt-0">
           <SubHeading>Work Experience</SubHeading>
           {WORK.map(({ name, duration, work = [], designation, company }) => (
-            <CompanyBox
-              company={company}
-              key={name}
-              work={work}
-              name={name}
-              duration={duration}
-              designation={designation}
-            />
+            <div className="mb-5" key={name}>
+              <CompanyBox
+                company={company}
+                key={name}
+                work={work}
+                name={name}
+                duration={duration}
+                designation={designation}
+              />
+            </div>
           ))}
         </div>
       </div>
